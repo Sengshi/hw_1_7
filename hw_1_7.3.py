@@ -27,4 +27,4 @@ def write_file(files):
                 out.write(line)
 
 
-print(len_files(['1.txt', '2.txt', '3.txt']))
+len_files(['1.txt', '2.txt', '3.txt'])
