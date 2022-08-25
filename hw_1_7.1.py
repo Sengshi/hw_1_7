@@ -25,8 +25,7 @@ def get_shop_list_by_dishes(dishes, person_count):
     for i in dishes:
         for j in cookbook()[i]:
             if j['ingredient_name'] not in get_shop:
-                get_shop[j['ingredient_name']] = {'quantity': j['quantity'] * person_count,
-                                                  'measure': j['measure']}
+                get_shop[j['ingredient_name']] = {'measure': j['measure'], 'quantity': j['quantity'] * person_count}
             else:
                 get_shop[j['ingredient_name']]['quantity'] += j['quantity'] * person_count
     return get_shop
