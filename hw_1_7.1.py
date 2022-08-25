@@ -1,3 +1,6 @@
+from pprint import pprint
+
+
 def cookbook():
     cook_book = {}
     foods = []
@@ -31,6 +34,6 @@ def get_shop_list_by_dishes(dishes, person_count):
     return get_shop
 
 
-print(cookbook())
+pprint(cookbook())
 
-print(get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3))
+pprint(get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3))
