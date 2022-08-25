@@ -19,4 +19,8 @@ def cookbook():
     return cook_book
 
 
-print(cookbook())
+def get_shop_list_by_dishes(dishes, person_count):
+    pass
+
+
+get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3)
