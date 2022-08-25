@@ -1,19 +1,23 @@
 from pprint import pprint
 
 
+def dishes_positions(book):
+    j = 0
+    positions = []
+    positions.append(j)
+    for i in book:
+        if i == '':
+            positions.append(j + 1)
+        j += 1
+    return positions
+
+
 def cookbook():
     cook_book = {}
-    foods = []
-    j = 0
     list_ingr = ['ingredient_name', 'quantity', 'measure']
     with open('recipes.txt', 'r') as f:
         read_book = f.read().splitlines()
-    foods.append(j)
-    for i in read_book:
-        if i == '':
-            foods.append(j + 1)
-        j += 1
-    for i in foods:
+    for i in dishes_positions(read_book):
         cook_book[read_book[i]] = []
         for k in range(0, int(read_book[i + 1])):
             ingredients = read_book[i + 2 + k].split(' | ')
