@@ -3,8 +3,7 @@ from pprint import pprint
 
 def dishes_positions(book):
     j = 0
-    positions = []
-    positions.append(j)
+    positions = [j]
     for i in book:
         if i == '':
             positions.append(j + 1)
@@ -38,6 +37,6 @@ def get_shop_list_by_dishes(dishes, person_count):
     return get_shop
 
 
-pprint(cookbook())
+print(cookbook())
 
 pprint(get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3))
