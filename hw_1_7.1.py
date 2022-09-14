@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def dishes_positions(book):
     j = 0
     positions = [j]
@@ -14,7 +11,7 @@ def dishes_positions(book):
 def cookbook():
     cook_book = {}
     list_ingr = ['ingredient_name', 'quantity', 'measure']
-    with open('recipes.txt', 'r') as f:
+    with open('recipes.txt', 'r', encoding='utf8') as f:
         read_book = f.read().splitlines()
     for i in dishes_positions(read_book):
         cook_book[read_book[i]] = []
@@ -39,4 +36,4 @@ def get_shop_list_by_dishes(dishes, person_count):
 
 print(cookbook())
 
-pprint(get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3))
+print(get_shop_list_by_dishes(['Омлет', 'Фахитос'], 3))

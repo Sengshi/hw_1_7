@@ -1,7 +1,7 @@
 def len_files(files):
     lenght_files = {}
     for i in files:
-        with open(i, 'r') as f:
+        with open(i, 'r', encoding='utf8') as f:
             if f.name not in lenght_files:
                 lenght_files[f.name] = len(f.readlines())
     return write_file(sorted_files(lenght_files))
@@ -16,10 +16,10 @@ def sorted_files(lenghts):
 
 
 def write_file(files):
-    with open('out.txt', 'w') as out:
+    with open('out.txt', 'w', encoding='utf8') as out:
         for k, v in files.items():
             out.write(k + '\n' + str(v) + '\n')
-            with open(k, 'r') as f:
+            with open(k, 'r', encoding='utf8') as f:
                 line = f.read()
             if line[-1::1] != '\n':
                 out.write(line + '\n')
